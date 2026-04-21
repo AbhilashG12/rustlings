@@ -1,10 +1,11 @@
 // TODO: This function refuses to generate text to be printed on a nametag if
 // of `Option<String>`.
 fn generate_nametag_text(name: String) -> Result<String,String> {
-    if name.is_empty() {
-        Err("`name` was empty; it must be nonempty.".into())
-    } else {
+    if name.len() > 0 {
         Ok(format!("Hi! My name is {}", name))
+    } else {
+
+        Err("`name` was empty; it must be nonempty.".into())
     }
 }
 
@@ -19,18 +20,16 @@ mod tests {
     #[test]
     fn generates_nametag_text_for_a_nonempty_name() {
         assert_eq!(
-            generate_nametag_text("Beyoncé".to_string()).as_deref(),
-            Ok("Hi! My name is Beyoncé"),
+            generate_nametag_text("Beyoncé".into()),
+            Ok("Hi! My name is Beyoncé".into()),
         );
     }
 
     #[test]
     fn explains_why_generating_nametag_text_fails() {
         assert_eq!(
-            generate_nametag_text(String::new())
-                .as_ref()
-                .map_err(|e| e.as_str()),
-            Err("Empty names aren't allowed"),
+            generate_nametag_text("".into()),
+            Err("Empty names aren't allowed".into()),
         );
     }
 }
