@@ -1,5 +1,4 @@
 // TODO: This function refuses to generate text to be printed on a nametag if
-// of `Option<String>`.
 fn generate_nametag_text(name: String) -> Result<String,String> {
     if name.len() > 0 {
         Ok(format!("Hi! My name is {}", name))
@@ -10,8 +9,6 @@ fn generate_nametag_text(name: String) -> Result<String,String> {
 }
 
 fn main() {
-    // You can optionally experiment here.
-}
 
 #[cfg(test)]
 mod tests {
