@@ -1,9 +1,3 @@
-// Say we're writing a game where you can buy items with tokens. All items cost
-// 5 tokens, and whenever you purchase items there is a processing fee of 1
-// token. A player of the game will type in how many items they want to buy, and
-// the `total_cost` function will calculate the total cost of the items. Since
-// the player typed in the quantity, we get it as a string. They might have
-// typed anything, not just numbers!
 //
 // Right now, this function isn't handling the error case at all. What we want
 // to do is: If we call the `total_cost` function on a string that is not a
