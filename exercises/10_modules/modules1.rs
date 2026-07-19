@@ -10,7 +10,7 @@ mod sausage_factory {
         println!("sausage!");
     }
 }
-
+// This is just a very random comment
 fn main() {
     sausage_factory::make_sausage();
 }
