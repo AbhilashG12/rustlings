@@ -16,10 +16,10 @@ mod tests {
         let mut fav_fruits_iterator = todo!();
 
         assert_eq!(fav_fruits_iterator.next(), Some(&"banana"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
+        assert_eq!(fav_fruits_iterator.next(), Some(&"custard apple")); // TODO: Replace `todo!()`
         assert_eq!(fav_fruits_iterator.next(), Some(&"avocado"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
+        assert_eq!(fav_fruits_iterator.next(), Some(&"peach")); // TODO: Replace `todo!()`
         assert_eq!(fav_fruits_iterator.next(), Some(&"raspberry"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
+        assert_eq!(fav_fruits_iterator.next(), None);   
     }
 }
